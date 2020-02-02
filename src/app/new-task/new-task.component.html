@@ -1,0 +1,53 @@
+
+<div class="error-notice" *ngIf="errorMessage">
+  <div class="oaerror danger">
+    <strong>Error</strong> - {{errorMessage}}
+  </div>
+  <br><br>
+</div>
+<form class="seminor-login-form" #f="ngForm" (ngSubmit)="submitForm(f)">
+  <div class="form-group">
+    <input type="text" class="form-control" required autocomplete="off" [(ngModel)]="task.name" [class.is-invalid]="name.invalid && name.touched" #title="ngModel"  name="name">
+    <label class="form-control-placeholder" for="contact-person">Task name</label>
+    <small class="text-danger" [class.d-none]="name.invalid || name.untouched">Name is required</small>
+
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" required autocomplete="off" [(ngModel)]="task.description" [class.is-invalid]="description.invalid && description.touched" #description="ngModel" name="description">
+    <label class="form-control-placeholder" for="contact-email">Description</label>
+    <small class="text-danger" [class.d-none]="description.valid || description.untouched">Description is required</small>
+  </div>
+  <div class="form-group">
+
+    <input type="date" class="form-control" required autocomplete="off" [(ngModel)]="task.deadline" [class.is-invalid]="deadline.invalid && deadline.touched" #date="ngModel" name="deadline" >
+    <small class="text-danger" [class.d-none]="deadline.valid || deadline.untouched">Date is required</small>
+
+  </div>
+  <div class="form-group">
+    <label>Status</label>
+    <select for="status" class="browser-default custom-select mb-3" [(ngModel)]="task.status" [class.is-invalid]="status.invalid && status.touched" required #status="ngModel" name="status">
+      <option selected value="On_Hold">On Hold</option>
+      <option value="In_Progress">In Progress</option>
+      <option value="Pending">Pending</option>
+      <option value="Completed">Completed</option>
+    </select>
+    <small class="text-danger" [class.d-none]="status.valid || status.untouched">Status is required</small>
+
+  </div>
+  <div class="form-group">
+    <label>Difficulty</label>
+    <select for="difficulty" class="browser-default custom-select mb-3" [(ngModel)]="task.difficulty" [class.is-invalid]="difficulty.invalid && difficulty.touched" required #difficulty="ngModel" name="difficulty">
+      <option selected value="EXTREMELY_DIFFICULT">Extremely Difficult</option>
+      <option value="VERY_DIFFICULT">Very Difficult</option>
+      <option value="DIFFICULT">Difficult</option>
+      <option value="A_BIT_DIFFICULT">A Bit Difficult</option>
+      <option value="VERY_EASY">Very Easy</option>
+      <option value="EXTREMELY_EASY">Extremely Easy</option>
+    </select>
+    <small class="text-danger" [class.d-none]="difficulty.valid || difficulty.untouched">Difficulty is required</small>
+  </div>
+
+  <div class="form-actions">
+    <button type="submit" class="btn btn-large btn-primary" [disabled]="f.pristine || f.invalid">Add Task</button>
+  </div>
+</form>

@@ -1,0 +1,44 @@
+  <div class="error-notice" *ngIf="errorMessage">
+    <div class="oaerror danger">
+      <strong>Error</strong> - {{errorMessage}}
+    </div>
+    <br><br>
+  </div>
+  <div class="card-deck" style="margin-top:100px">
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">ID</div>
+      <div class="card-body">
+        <h5 class="card-title">{{task.id}}</h5>
+      </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header"> Name</div>
+      <div class="card-body">
+        <h5 class="card-title">{{task.name}}</h5>
+      </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">Deadline</div>
+      <div class="card-body">
+        <h5 class="card-title">{{task.deadline}}</h5>
+      </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">Description</div>
+      <div class="card-body">
+        <h5 class="card-title">{{task.description}}</h5>
+      </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">Status</div>
+      <div class="card-body">
+        <h5 class="card-title">{{task.status}}</h5>
+      </div>
+    </div>
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">Difficulty</div>
+      <div class="card-body">
+        <h5 class="card-title">{{task.difficulty}}</h5>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\authentication",
+    "\\src\\app\\delete-task",
+    "\\src\\app\\header",
+    "\\src\\app\\list-task",
+    "\\src\\app\\user-login",
+    "\\src\\assets",
+    "\\src\\environments"
+  ],
+  "SelectedNode": "\\src\\app\\authentication\\auth.guard.ts",
+  "PreviewInSolutionExplorer": false
+}
